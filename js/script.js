@@ -19,8 +19,6 @@
 
 
 
-//1° Milestone
-
 // 1. Creare tutte le variabili che ci servono
 
 const limit = 100;
@@ -39,13 +37,14 @@ let box_element = document.createElement("div");
 console.log(box_container);
 console.log(box_element);
 
+
 // 2. Creare un ciclo con l'operatore incrementale
 
-for (let n = 1; n <= limit; n++) {
+for (let n = 1; n < limit; n++) {
   if ((n % multiplo3 === 0) && (n % multiplo5 === 0)){
 
     let box_element = document.createElement("div");
-    box_element.className = ("box");
+    box_element.className = ("box", "fizzbuzz");
     box_element.append(multiplo3_5_message)
     box_container.append(box_element);
     console.log(n, multiplo3_5_message);
@@ -53,7 +52,7 @@ for (let n = 1; n <= limit; n++) {
   } else if (!(n % multiplo5)) {
 
     let box_element = document.createElement("div");
-    box_element.className = ("box");
+    box_element.className = ("box", "buzz");
     box_element.append(multiplo5_message)
     box_container.append(box_element);
     console.log((n, multiplo5_message));
@@ -61,7 +60,7 @@ for (let n = 1; n <= limit; n++) {
   } else if (!(n % multiplo3)) {
 
     let box_element = document.createElement("div");
-    box_element.className = ("box");
+    box_element.className = ("box", "fizz");
     box_element.append(multiplo3_message)
     box_container.append(box_element);
     console.log(n, multiplo3_message);
@@ -75,8 +74,3 @@ for (let n = 1; n <= limit; n++) {
     console.log(n, n);
   }
 }
-
-
-
-//2° Milestone
-

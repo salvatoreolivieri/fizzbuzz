@@ -23,7 +23,7 @@ body{
 
 .box-container{
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-wrap: wrap;
 
   width: 60%;
@@ -47,17 +47,44 @@ body{
 
 /* multipli di 3 */
 .fizz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #44D6A1;
+  height: 100px;
+  width: 100px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 
 /* multipli di 5 */
 .buzz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #FBD166;
+  height: 100px;
+  width: 100px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 
 /* multipli sia di 3 che di 5 */
 .fizzbuzz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #F0466E;
+  height: 100px;
+  width: 100px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
 }

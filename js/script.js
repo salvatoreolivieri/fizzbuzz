@@ -32,45 +32,49 @@ const multiplo5_message = ("Buzz");
 const multiplo3_5_message = ("FizzBuzz");
 
 let box_container = document.querySelector(".box-container");
-let box_element = document.createElement("div");
 
 console.log(box_container);
-console.log(box_element);
+// console.log(box_element);
 
 
 // 2. Creare un ciclo con l'operatore incrementale
 
 for (let n = 1; n < limit; n++) {
+
+  let box_element = document.createElement("div");
+
   if ((n % multiplo3 === 0) && (n % multiplo5 === 0)){
 
-    let box_element = document.createElement("div");
-    box_element.className = ("box", "fizzbuzz");
+    box_element.className = "box fizzbuzz";
     box_element.append(multiplo3_5_message)
-    box_container.append(box_element);
+    
     console.log(n, multiplo3_5_message);
+
 
   } else if (!(n % multiplo5)) {
 
-    let box_element = document.createElement("div");
-    box_element.className = ("box", "buzz");
+    box_element.className = "box buzz";
     box_element.append(multiplo5_message)
-    box_container.append(box_element);
+
     console.log((n, multiplo5_message));
+
 
   } else if (!(n % multiplo3)) {
 
-    let box_element = document.createElement("div");
-    box_element.className = ("box", "fizz");
+    box_element.className = "box fizz";
     box_element.append(multiplo3_message)
-    box_container.append(box_element);
+
     console.log(n, multiplo3_message);
 
+
   } else{
-    let box_element = document.createElement("div");
-    box_element.className = ("box");
+
+    box_element.className = "box";
     box_element.append(n)
-    box_container.append(box_element);
 
     console.log(n, n);
+
   }
+
+  box_container.append(box_element);
 }

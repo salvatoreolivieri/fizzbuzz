@@ -12,7 +12,7 @@
   1. Creare una variabile che contenga il box-container
   2. All'interno della precedente variabile inserire un altro div
   3. Dare a quest altro div la classe box
-s
+
 3° Milestone: Applica uno stile differente a seconda del valore dell’indice
 
 */
@@ -33,17 +33,43 @@ const multiplo5_message = ("Buzz");
 
 const multiplo3_5_message = ("FizzBuzz");
 
+const box_container = document.querySelector(".box-container");
+
 
 // 2. Creare un ciclo con l'operatore incrementale
 
-for (let n = 0; n <= limit; n++){
-  if (!(n % multiplo3)){
-    console.log(multiplo3_message);
-  } else if (!(n % multiplo5)){
-    console.log((multiplo5_message));
-  } else if (!(n % multiplo3) && !(n % multiplo5)){
+for (let n = 1; n <= limit; n++){
+  if ((n % multiplo3 === 0) && (n % multiplo5 === 0)){
+
     console.log(multiplo3_5_message);
+
+  } else if (!(n % multiplo5)){
+
+    console.log((multiplo5_message));
+
+  } else if (!(n % multiplo3)){
+
+    console.log(multiplo3_message);
+
   } else{
     console.log(n);
   }
 }
+
+
+
+//2° Milestone
+
+
+
+// let box_element = document.createElement("div");
+//     box_element.classList.add("box");
+//     box_element.append(multiplo3_message)
+
+//     box_container.append(box_element);
+
+
+
+
+// const box_element = document.createElement("div");
+// box_element.classList.add("box");
